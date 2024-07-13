@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+
+
+    <style>
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        .row{
+          height: 400px;
+          display: flex;
+          gap: 10px;
+          margin-bottom:10px ;
+        }
+        .row > img{
+          flex: 1;
+        }
+        .vertaicall img{
+          height:(100% - 5px)/2;
+        }
+
+      .squar-collaps{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+      }
+        @media screen and (max-width:577px){
+            .row{
+              flex-direction: column;
+              height: auto;
+            }
+            .squar-collaps{
+              grid-template-columns: 1fr;
+            }
+        }
+        /*medium devices*/
+
+        @media screen and (min-width:577px) and (max-width:992px){
+            .row{
+                flex-direction: column;
+                height: auto;
+            }
+        }
+        
+
+        .container{
+          margin-top: 100px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, 200px) 50px 50px;
+          gap: 20px;
+        }
+
+        .box{
+          background-color: grey;
+          text-align: center;
+          padding:20px ;
+          font-size: 20px;
+        }
+        #box-1{
+          grid-row:span 5;
+        }
+        #box-11, #box-12{
+          grid-column: span 3;
+          background-color: cadetblue;
+        }
+        #box-6, #box-7,#box-9,#box-10{
+          background-color: rgba(137, 43, 226, 0.719);
+        }
+    </style>
+
+
+</head>
+<body>
+    
+<main>
+  <section>
+    <div class="row">
+      <img src="img/free-photo-of-a-grey-crowned-crane-on-the-grass.jpeg" alt="" srcset="">
+    </div>
+    <div class="row">
+      <div>
+        <img src="img/grey-crowned-crane-bird-crane-animal-45853.jpeg" alt="" srcset="">
+      </div>
+      <div>
+        <img src="img/grey-necked-crowned-crane-162259.jpeg" alt="" srcset="">
+      </div>
+      <div class="vertaicall">
+        <img src="img/pexels-photo-130621.jpeg" alt="" srcset="">
+        <img src="img/pexels-photo-130621.jpeg" alt="" srcset="">
+      </div>
+      </div>
+    <div class="row">
+
+      <div>
+        <img src="img/pexels-photo-1887624.jpeg" alt="" srcset="">
+      </div>
+      <div class="squar-collaps">
+        <img src="img/pexels-photo-417074.jpeg" alt="" srcset="">
+        <img src="img/pexels-photo-417074.jpeg" alt="" srcset="">
+        <img src="img/pexels-photo-417074.jpeg" alt="" srcset="">
+        <img src="img/pexels-photo-417074.jpeg" alt="" srcset="">
+      </div>
+      <div>
+        <img src="img/pexels-photo-206359.jpeg" alt="">
+      </div>
+    </div>
+  
+  </section>
+</main>
+
+<!-- .container>.box#box-$*12{Box - $} -->
+
+<div class="container">
+  <div class="box" id="box-1">Box - 1</div>
+  <div class="box" id="box-2">Box - 2</div>
+  <div class="box" id="box-3">Box - 3</div>
+  <div class="box" id="box-4">Box - 4</div>
+  <div class="box" id="box-5">Box - 5</div>
+  <div class="box" id="box-6">Box - 6</div>
+  <div class="box" id="box-7">Box - 7</div>
+  <div class="box" id="box-8">Box - 8</div>
+  <div class="box" id="box-9">Box - 9</div>
+  <div class="box" id="box-10">Box - 10</div>
+  <div class="box" id="box-11">Box - 11</div>
+  <div class="box" id="box-12">Box - 12</div>
+</div>
+
+
+
+
+
+  
+
+<script>
+    
+    
+</script>
+
+
+
+</body>
+</html>
